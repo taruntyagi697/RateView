@@ -45,7 +45,7 @@ RateView comes with a property set for it's customization as needed :-
     RateView can be used to take advantage of this feature.
 
 ## How It Looks
-![Screenshot1.png]    
+[Screenshot1]    
 
     
 ## Demo App
