@@ -43,6 +43,10 @@ RateView comes with a property set for it's customization as needed :-
     
     Given that UIColor is capable of color patterns handling made from images, 
     RateView can be used to take advantage of this feature.
+
+## How It Looks
+![Screenshot1.png]    
+
     
 ## Demo App
     Demo app includes almost all of the property usages through a pretty basic UITableView example.
