@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AA64B6681967CA9300011799 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA64B6671967CA9300011799 /* RateView.m */; };
-		AA64B66B1967CC8000011799 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = AA64B6691967CC8000011799 /* LICENSE.md */; };
-		AA64B66C1967CC8000011799 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA64B66A1967CC8000011799 /* README.md */; };
+		AA8780BA196B9C7500B51EA7 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = AA8780B8196B9C7500B51EA7 /* LICENSE.md */; };
+		AA8780BB196B9C7500B51EA7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA8780B9196B9C7500B51EA7 /* README.md */; };
 		AA919DD619670B28007BE4A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD519670B28007BE4A2 /* Foundation.framework */; };
 		AA919DD819670B28007BE4A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD719670B28007BE4A2 /* CoreGraphics.framework */; };
 		AA919DDA19670B28007BE4A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD919670B28007BE4A2 /* UIKit.framework */; };
@@ -42,8 +42,8 @@
 /* Begin PBXFileReference section */
 		AA64B6661967CA9300011799 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
 		AA64B6671967CA9300011799 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
-		AA64B6691967CC8000011799 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
-		AA64B66A1967CC8000011799 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		AA8780B8196B9C7500B51EA7 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		AA8780B9196B9C7500B51EA7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		AA919DD219670B28007BE4A2 /* Star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA919DD519670B28007BE4A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA919DD719670B28007BE4A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -95,10 +95,8 @@
 		AA64B6651967CA9300011799 /* RateView */ = {
 			isa = PBXGroup;
 			children = (
-				AA64B6691967CC8000011799 /* LICENSE.md */,
 				AA64B6661967CA9300011799 /* RateView.h */,
 				AA64B6671967CA9300011799 /* RateView.m */,
-				AA64B66A1967CC8000011799 /* README.md */,
 			);
 			path = RateView;
 			sourceTree = "<group>";
@@ -106,6 +104,8 @@
 		AA919DC919670B28007BE4A2 = {
 			isa = PBXGroup;
 			children = (
+				AA8780B8196B9C7500B51EA7 /* LICENSE.md */,
+				AA8780B9196B9C7500B51EA7 /* README.md */,
 				AA64B6651967CA9300011799 /* RateView */,
 				AA919DDB19670B28007BE4A2 /* Star */,
 				AA919DFA19670B28007BE4A2 /* StarTests */,
@@ -271,8 +271,8 @@
 				AAB904DF1967B76B000B51BF /* image2.jpeg in Resources */,
 				AAB904DC1967B76B000B51BF /* image0.jpeg in Resources */,
 				AA919DE919670B28007BE4A2 /* Main.storyboard in Resources */,
-				AA64B66C1967CC8000011799 /* README.md in Resources */,
-				AA64B66B1967CC8000011799 /* LICENSE.md in Resources */,
+				AA8780BB196B9C7500B51EA7 /* README.md in Resources */,
+				AA8780BA196B9C7500B51EA7 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

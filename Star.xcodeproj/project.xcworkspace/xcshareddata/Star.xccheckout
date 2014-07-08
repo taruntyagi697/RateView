@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>857F4321-4FB3-4B26-A442-D0BCC1F6BEDA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Star</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>537FB4FD-1465-4265-A479-F82CDC5255C1</key>
+		<string>https://github.com/taruntyagi697/RateView.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Star.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>537FB4FD-1465-4265-A479-F82CDC5255C1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/taruntyagi697/RateView.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>537FB4FD-1465-4265-A479-F82CDC5255C1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>537FB4FD-1465-4265-A479-F82CDC5255C1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RateView</string>
+		</dict>
+	</array>
+</dict>
+</plist>
