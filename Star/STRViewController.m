@@ -121,21 +121,36 @@
     }
     
     titleLbl.text = titles[indexPath.row];
-    
     rateVw.starSize = (indexPath.row > 1) ? 50 : 30;
-    rateVw.rating = 3.8f;
+    rateVw.rating = 3.4f;
     
-    if(indexPath.row == 3)
+    if(indexPath.row == 0)
     {
-        rateVw.starNormalColor = [UIColor colorWithRed:232/255.0f green:74/255.0f
-                                                  blue:65/255.0 alpha:1.0];
-        rateVw.starFillColor = [UIColor colorWithRed:250/255.0f green:206/255.0f
-                                                blue:10/255.0 alpha:1.0];
-        rateVw.starBorderColor = [UIColor colorWithRed:1/255.0f green:153/255.0f
-                                                  blue:2/255.0 alpha:1.0];
+        rateVw.rating = 3.6f;
+    }
+    else if(indexPath.row == 1)
+    {
+        rateVw.rating = 4.4f;
+    }
+    else if(indexPath.row == 2)
+    {
+        rateVw.rating = 3.3f;
+    }
+    else if(indexPath.row == 3)
+    {
+        rateVw.rating = 4.3f;
+        
+        rateVw.starNormalColor = [UIColor colorWithRed:255/255.0f green:255/255.0f
+                                                  blue:255/255.0 alpha:1.0];
+        rateVw.starFillColor = [UIColor colorWithRed:255/255.0f green:209/255.0f
+                                                blue:23/255.0 alpha:1.0];
+        rateVw.starBorderColor = [UIColor colorWithRed:38/255.0f green:38/255.0f
+                                                  blue:38/255.0 alpha:1.0];
     }
     else if(indexPath.row == 4)
     {
+        rateVw.rating = 2.6f;
+        
         rateVw.starNormalColor = [UIColor colorWithPatternImage:
                                   [UIImage imageNamed:@"image0.jpeg"]];
         
@@ -145,19 +160,22 @@
         rateVw.starBorderColor = [UIColor colorWithPatternImage:
                                   [UIImage imageNamed:@"image2.jpeg"]];
     }
+    
+    // Modes - Horizontal, Vertical, Axial
+    if(indexPath.row == 6)
+    {
+        rateVw.rating = 2.35f;
+        rateVw.starFillMode = StarFillModeVertical;
+    }
+    else if(indexPath.row == 7)
+    {
+        rateVw.rating = 3.65f;
+        rateVw.starFillMode = StarFillModeAxial;
+    }
     else
     {
-        rateVw.starNormalColor = [UIColor darkGrayColor];
-        rateVw.starFillColor = [UIColor lightGrayColor];
-        rateVw.starBorderColor = [UIColor whiteColor];
-    }
-    
-    if(indexPath.row == 6)
-        rateVw.starFillMode = StarFillModeVertical;
-    else if(indexPath.row == 7)
-        rateVw.starFillMode = StarFillModeAxial;
-    else
         rateVw.starFillMode = StarFillModeHorizontal;
+    }
     
     rateVw.canRate = (indexPath.row == 8);
     rateVw.delegate = (indexPath.row == 8) ? self : nil;

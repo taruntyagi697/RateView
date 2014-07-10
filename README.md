@@ -12,7 +12,7 @@ To use RateView, you must have ARC ON for your project or you'll be needed to co
 
 Configuring RateView is as simple as :
 
-	RateView* rv = [RateView rateViewWithRating:3.5f];
+	RateView* rv = [RateView rateViewWithRating:3.7f];
     [self.view addSubview:rv];
 
 RateView takes it over from here. 
