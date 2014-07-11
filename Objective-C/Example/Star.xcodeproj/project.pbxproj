@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA64B6681967CA9300011799 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA64B6671967CA9300011799 /* RateView.m */; };
-		AA8780BA196B9C7500B51EA7 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = AA8780B8196B9C7500B51EA7 /* LICENSE.md */; };
-		AA8780BB196B9C7500B51EA7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA8780B9196B9C7500B51EA7 /* README.md */; };
+		AA79F2DF196F873E00634823 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA79F2DE196F873E00634823 /* RateView.m */; };
 		AA919DD619670B28007BE4A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD519670B28007BE4A2 /* Foundation.framework */; };
 		AA919DD819670B28007BE4A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD719670B28007BE4A2 /* CoreGraphics.framework */; };
 		AA919DDA19670B28007BE4A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD919670B28007BE4A2 /* UIKit.framework */; };
@@ -40,10 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA64B6661967CA9300011799 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
-		AA64B6671967CA9300011799 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
-		AA8780B8196B9C7500B51EA7 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
-		AA8780B9196B9C7500B51EA7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		AA79F2DD196F873E00634823 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
+		AA79F2DE196F873E00634823 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
 		AA919DD219670B28007BE4A2 /* Star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA919DD519670B28007BE4A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA919DD719670B28007BE4A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -92,11 +88,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA64B6651967CA9300011799 /* RateView */ = {
+		AA79F2DC196F873E00634823 /* RateView */ = {
 			isa = PBXGroup;
 			children = (
-				AA64B6661967CA9300011799 /* RateView.h */,
-				AA64B6671967CA9300011799 /* RateView.m */,
+				AA79F2DD196F873E00634823 /* RateView.h */,
+				AA79F2DE196F873E00634823 /* RateView.m */,
 			);
 			path = RateView;
 			sourceTree = "<group>";
@@ -104,9 +100,7 @@
 		AA919DC919670B28007BE4A2 = {
 			isa = PBXGroup;
 			children = (
-				AA8780B8196B9C7500B51EA7 /* LICENSE.md */,
-				AA8780B9196B9C7500B51EA7 /* README.md */,
-				AA64B6651967CA9300011799 /* RateView */,
+				AA79F2DC196F873E00634823 /* RateView */,
 				AA919DDB19670B28007BE4A2 /* Star */,
 				AA919DFA19670B28007BE4A2 /* StarTests */,
 				AAB904D31967B76B000B51BF /* Resources */,
@@ -271,8 +265,6 @@
 				AAB904DF1967B76B000B51BF /* image2.jpeg in Resources */,
 				AAB904DC1967B76B000B51BF /* image0.jpeg in Resources */,
 				AA919DE919670B28007BE4A2 /* Main.storyboard in Resources */,
-				AA8780BB196B9C7500B51EA7 /* README.md in Resources */,
-				AA8780BA196B9C7500B51EA7 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA64B6681967CA9300011799 /* RateView.m in Sources */,
+				AA79F2DF196F873E00634823 /* RateView.m in Sources */,
 				AA919DE619670B28007BE4A2 /* STRAppDelegate.m in Sources */,
 				AA919DEC19670B28007BE4A2 /* STRViewController.m in Sources */,
 				AA919DE219670B28007BE4A2 /* main.m in Sources */,
