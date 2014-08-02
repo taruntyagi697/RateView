@@ -4,9 +4,16 @@
 * displaying a rating for an item `canRate = NO`  OR 
 * actually provide user a chance to rate any product or item `canRate = YES`.
 
-## ARC is MUST
+## Requirements
 
-To use RateView, you must have ARC ON for your project or you'll be needed to compile RateView with `-fobjc-arc` flag under Build Phases - Compile Sources.
+* iOS 6.0 or later.
+* ARC enabled.
+
+## Installation
+* Want a Pod for this, just add following line to your podfile-
+    pod 'RateView' '~>1.1'
+
+* You can directly copy the source files from RateView folder.
 
 ## How To Use
 

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA4A73C9196F890500EC85DC /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA4A73C8196F890500EC85DC /* RateView.m */; };
+		AA7EBF83198CC4DF00449403 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7EBF82198CC4DF00449403 /* RateView.m */; };
+		AA7EBF86198CC4FA00449403 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = AA7EBF84198CC4FA00449403 /* LICENSE.md */; };
+		AA7EBF87198CC4FA00449403 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AA7EBF85198CC4FA00449403 /* README.md */; };
 		AA919DD619670B28007BE4A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD519670B28007BE4A2 /* Foundation.framework */; };
 		AA919DD819670B28007BE4A2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD719670B28007BE4A2 /* CoreGraphics.framework */; };
 		AA919DDA19670B28007BE4A2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA919DD919670B28007BE4A2 /* UIKit.framework */; };
@@ -38,8 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AA4A73C7196F890500EC85DC /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
-		AA4A73C8196F890500EC85DC /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
+		AA7EBF81198CC4DF00449403 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
+		AA7EBF82198CC4DF00449403 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
+		AA7EBF84198CC4FA00449403 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE.md; path = ../LICENSE.md; sourceTree = "<group>"; };
+		AA7EBF85198CC4FA00449403 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		AA919DD219670B28007BE4A2 /* Star.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Star.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA919DD519670B28007BE4A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AA919DD719670B28007BE4A2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -88,19 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA4A73C6196F890500EC85DC /* RateView */ = {
+		AA7EBF80198CC4DF00449403 /* RateView */ = {
 			isa = PBXGroup;
 			children = (
-				AA4A73C7196F890500EC85DC /* RateView.h */,
-				AA4A73C8196F890500EC85DC /* RateView.m */,
+				AA7EBF81198CC4DF00449403 /* RateView.h */,
+				AA7EBF82198CC4DF00449403 /* RateView.m */,
 			);
-			path = RateView;
+			name = RateView;
+			path = ../RateView;
 			sourceTree = "<group>";
 		};
 		AA919DC919670B28007BE4A2 = {
 			isa = PBXGroup;
 			children = (
-				AA4A73C6196F890500EC85DC /* RateView */,
+				AA7EBF84198CC4FA00449403 /* LICENSE.md */,
+				AA7EBF85198CC4FA00449403 /* README.md */,
+				AA7EBF80198CC4DF00449403 /* RateView */,
 				AA919DDB19670B28007BE4A2 /* Star */,
 				AA919DFA19670B28007BE4A2 /* StarTests */,
 				AAB904D31967B76B000B51BF /* Resources */,
@@ -265,6 +272,8 @@
 				AAB904DF1967B76B000B51BF /* image2.jpeg in Resources */,
 				AAB904DC1967B76B000B51BF /* image0.jpeg in Resources */,
 				AA919DE919670B28007BE4A2 /* Main.storyboard in Resources */,
+				AA7EBF87198CC4FA00449403 /* README.md in Resources */,
+				AA7EBF86198CC4FA00449403 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4A73C9196F890500EC85DC /* RateView.m in Sources */,
+				AA7EBF83198CC4DF00449403 /* RateView.m in Sources */,
 				AA919DE619670B28007BE4A2 /* STRAppDelegate.m in Sources */,
 				AA919DEC19670B28007BE4A2 /* STRViewController.m in Sources */,
 				AA919DE219670B28007BE4A2 /* main.m in Sources */,
