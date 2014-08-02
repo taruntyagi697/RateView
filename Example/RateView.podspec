@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/taruntyagi697/RateView.git", :tag => "v1.0" }
 
   
-  s.source_files  = "Objective-C/Example/RateView"
+  s.source_files  = "RateView"
 
   s.requires_arc = true
 
