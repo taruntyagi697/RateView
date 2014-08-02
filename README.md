@@ -11,17 +11,20 @@
 
 ## Installation
 * Want a Pod for this, just add following line to your podfile-
+```
+pod 'RateView' '~>1.1'
 
-    pod 'RateView' '~>1.1'
-
+```
 * You can directly copy the source files from RateView folder.
 
 ## How To Use
 
 Configuring RateView is as simple as :
+```objective-c
+RateView* rv = [RateView rateViewWithRating:3.7f];
+[self.view addSubview:rv];
 
-	RateView* rv = [RateView rateViewWithRating:3.7f];
-    [self.view addSubview:rv];
+```
 
 RateView takes it over from here. 
 * It uses CoreGraphics Context to draw the Star shapes with transparent background and appropriately percent fills them by calculating the `rating`. 
