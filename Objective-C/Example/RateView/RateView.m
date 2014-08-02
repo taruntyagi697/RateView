@@ -119,12 +119,20 @@
     CGPathAddLineToPoint(path, NULL, arm*0.50, arm*0.75);
     CGPathAddLineToPoint(path, NULL, arm*0.15, arm*1.00);
     CGPathAddLineToPoint(path, NULL, arm*0.25, arm*0.60);
+    CGPathAddLineToPoint(path, NULL, arm*0.0, arm*0.35);
     
     /*
-     * Add this path to context, clip the context for this path.
+     * Add this path's copy(Only for border) to context, stroke it for the border to appear.
+     * Add the original path to context, Clip the context for this path.
      * This way, we will be able to draw inside star shaped path only
      */
     CGContextSaveGState(context);
+    
+    CGContextAddPath(context, CGPathCreateCopy(path));
+    CGContextSetLineWidth(context, 1);
+    CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
+    CGContextStrokePath(context);
+    
     CGContextAddPath(context, path);
     CGContextClip(context);
     
@@ -201,25 +209,6 @@
     
     // Restore Context State
     CGContextRestoreGState(context);
-    
-    // Now filling has been completed, We will draw the border now
-    CGContextBeginPath(context);
-    CGContextMoveToPoint(context, arm*0.0, arm*0.35);
-    CGContextAddLineToPoint(context, arm*0.35, arm*0.35);
-    CGContextAddLineToPoint(context, arm*0.50, arm*0.0);
-    CGContextAddLineToPoint(context, arm*0.65, arm*0.35);
-    CGContextAddLineToPoint(context, arm*1.00, arm*0.35);
-    CGContextAddLineToPoint(context, arm*0.75, arm*0.60);
-    CGContextAddLineToPoint(context, arm*0.85, arm*1.00);
-    CGContextAddLineToPoint(context, arm*0.50, arm*0.75);
-    CGContextAddLineToPoint(context, arm*0.15, arm*1.00);
-    CGContextAddLineToPoint(context, arm*0.25, arm*0.60);
-    CGContextClosePath(context);
-    
-    // Set line width to appropriate thickness, use borderColor to stroke border
-    CGContextSetLineWidth(context, 1);
-    CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
-    CGContextStrokePath(context);
 }
 
 #pragma mark
