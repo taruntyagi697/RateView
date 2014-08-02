@@ -12,8 +12,7 @@
 ## Installation
 * Want a Pod for this, just add following line to your podfile-
 ```
-pod 'RateView' '~>1.1'
-
+pod 'RateView', '~>1.1'
 ```
 * You can directly copy the source files from RateView folder.
 
@@ -23,7 +22,6 @@ Configuring RateView is as simple as :
 ```objective-c
 RateView* rv = [RateView rateViewWithRating:3.7f];
 [self.view addSubview:rv];
-
 ```
 
 RateView takes it over from here. 
