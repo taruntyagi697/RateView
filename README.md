@@ -12,7 +12,7 @@
 ## Installation
 * Want a Pod for this, just add following line to your podfile-
 ```
-pod 'RateView', '~>1.1'
+pod 'RateView'
 ```
 * You can directly copy the source files from RateView folder.
 
