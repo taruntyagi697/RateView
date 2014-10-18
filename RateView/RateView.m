@@ -127,8 +127,11 @@
      * This way, we will be able to draw inside star shaped path only
      */
     CGContextSaveGState(context);
-    
-    CGContextAddPath(context, CGPathCreateCopy(path));
+
+    CGPathRef pathCopy = CGPathCreateCopy(path);
+    CGContextAddPath(context, pathCopy);
+    CGPathRelease(pathCopy);
+
     CGContextSetLineWidth(context, 1);
     CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
     CGContextStrokePath(context);
@@ -209,6 +212,8 @@
     
     // Restore Context State
     CGContextRestoreGState(context);
+
+    CGPathRelease(path);
 }
 
 #pragma mark
