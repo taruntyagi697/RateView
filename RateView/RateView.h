@@ -55,6 +55,9 @@ typedef enum
 // User can rate using rate view or not (Permission flag)
 @property(nonatomic,assign)BOOL canRate;
 
+// Rating step when user can rate
+@property(nonatomic,assign)float step;
+
 // Star Normal, Fill & Border Colors
 @property(nonatomic,strong)UIColor* starNormalColor;
 @property(nonatomic,strong)UIColor* starFillColor;

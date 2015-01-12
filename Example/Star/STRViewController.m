@@ -174,6 +174,7 @@
     }
     else
     {
+        rateVw.step = 0.5f;
         rateVw.starFillMode = StarFillModeHorizontal;
     }
     
