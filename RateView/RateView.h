@@ -55,7 +55,7 @@ typedef enum
 // User can rate using rate view or not (Permission flag)
 @property(nonatomic,assign)BOOL canRate;
 
-// Rating step when user can rate
+// Rating step when user can rate (0.0 to 1.0)
 @property(nonatomic,assign)float step;
 
 // Star Normal, Fill & Border Colors

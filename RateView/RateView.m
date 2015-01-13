@@ -391,6 +391,19 @@
     _canRate = canRate;
 }
 
+- (void) setStep:(float)step
+{
+    if (step < 0.0f) {
+        _step = 0.0f;
+    }
+    else if (step > 1.0f) {
+        _step = 1.0f;
+    }
+    else {
+        _step = step;
+    }
+}
+
 -(void)setStarNormalColor:(UIColor*)starNormalColor
 {
     _starNormalColor = starNormalColor;
@@ -507,8 +520,8 @@
             x = self.frame.size.width;
         else if (self.step) {
             float div = (self.frame.size.width * self.step) / 5;
-            x = (int)(x / div) + self.step;
-            x *= div;
+            x = (x / div) + self.step;
+            x = div * (int)x;
         }
         self.rating = x / _starSize;
     }
