@@ -36,7 +36,7 @@ RateView comes with a property set for it's customization as needed :-
 
 * `canRate` : User can rate using rate view or not (Permission flag)
 
-* `step` : Rating step when user can rate
+* `step` : Rating step when user can rate (0.1f to 1.0f)
 
 * `starNormalColor` : Rating Star's backgroundColor
     
