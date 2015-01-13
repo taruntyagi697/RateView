@@ -303,6 +303,8 @@
         
         _rating = rating;
         
+        _step = 0.0f;
+        
         // Check Rating Max / Min
         if(_rating > MaximumRating)
         {
@@ -497,13 +499,18 @@
     {
         CGPoint location = [[touches anyObject] locationInView:self];
         RVLog(@"%@", NSStringFromCGPoint(location));
-        
-        if(location.x < 0.0f)
-            location.x = 0.0f;
-        else if(location.x > self.frame.size.width)
-            location.x = self.frame.size.width;
-        
-        self.rating = location.x / _starSize;
+        // Compute location
+        float x = location.x;
+        if(x < 0.0f)
+            x = 0.0f;
+        else if(x > self.frame.size.width)
+            x = self.frame.size.width;
+        else if (self.step) {
+            float div = (self.frame.size.width * self.step) / 5;
+            x = (int)(x / div) + self.step;
+            x *= div;
+        }
+        self.rating = x / _starSize;
     }
 }
 
