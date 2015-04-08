@@ -537,4 +537,12 @@
     }
 }
 
+#pragma mark
+#pragma mark <Auto Layout Helpers>
+#pragma mark
+
+- (CGSize)intrinsicContentSize {
+    return CGSizeMake(self.starSize * 5, self.starSize);
+}
+
 @end
