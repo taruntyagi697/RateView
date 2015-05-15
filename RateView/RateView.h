@@ -58,6 +58,9 @@ typedef enum
 // Rating step when user can rate (0.0 to 1.0)
 @property(nonatomic,assign)float step;
 
+// Number of stars to display
+@property(nonatomic,assign)int starCount;
+
 // Star Normal, Fill & Border Colors
 @property(nonatomic,strong)UIColor* starNormalColor;
 @property(nonatomic,strong)UIColor* starFillColor;
