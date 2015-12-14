@@ -276,6 +276,7 @@
 #define DefaultStarBorderColor [UIColor whiteColor]
 
 #define DefaultStarSize 30
+#define DefaultStarCount 5
 #define MinimumRating   0.0
 #define MaximumRating   5.0
 #define TagOffset       10000
@@ -295,6 +296,11 @@
     return [[self alloc] initWithRating:rating];
 }
 
++(RateView*)initWithRating:(float)rating andStarCount:(int) count
+{
+    return [[self alloc] initWithRating:rating andStarCount:count];
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     return [self initWithRating:0 andFrame:self.frame];
@@ -305,6 +311,14 @@
     return [self initWithRating:rating andFrame:DefaultRateViewFrame];
 }
 
+-(id)initWithRating:(float)rating andStarCount:(int) count
+{
+    self = [self initWithRating:rating];
+    [self setStarCount:count];
+    return self;
+}
+
+
 -(id)initWithRating:(float)rating andFrame:(CGRect)newFrame
 {
     if(self = [super initWithFrame:newFrame])
@@ -312,7 +326,7 @@
         self.backgroundColor = [UIColor clearColor];
 
         _rating = rating;
-
+        _starCount = DefaultStarCount;
         _step = 0.0f;
 
         // Check Rating Max / Min
@@ -348,15 +362,15 @@
 
 -(void)updateRateView
 {
-    // Update frame for self to accommodate desired width for 5 stars
+    // Update frame for self to accommodate desired width for _starCount stars
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y,
-                            5*_starSize, _starSize);
+                            _starCount*_starSize, _starSize);
 
     // Check if stars have been added to self previously or not
     if([self.subviews count] == 0)
     {
-        // If not, add 5 stars to self with desired frames
-        for(int i=1; i<=5; i++)
+        // If not, add _starCount stars to self with desired frames
+        for (int i = 1 ; i <= _starCount; i++)
         {
             Star* star = [Star starWithColor:_starNormalColor fillColor:_starFillColor
                                       origin:CGPointMake((i-1)*_starSize, 0) andSize:_starSize];
@@ -376,7 +390,7 @@
     [self updateRateView];
 
     // Update Stars appearance for currentValue
-    for(int i=1; i<=5; i++)
+    for(int i=1; i <= _starCount; i++)
     {
         Star* star = (Star*)[self viewWithTag:TagOffset+i];
 
@@ -394,6 +408,17 @@
     // Notify the delegate object about rating change
     if([_delegate respondsToSelector:@selector(rateView:didUpdateRating:)])
         [_delegate rateView:self didUpdateRating:_rating];
+}
+
+- (void) setStarCount:(int)numberOfStars
+{
+    if (_starCount == numberOfStars) {
+        return;
+    }
+
+    _starCount = numberOfStars;
+    [[self subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self updateRateView];
 }
 
 -(void)setCanRate:(BOOL)canRate
@@ -420,7 +445,7 @@
     [self updateRateView];
 
     // Update Stars appearance for color
-    for(int i=1; i<=5; i++)
+    for(int i = 1 ; i <= _starCount; i++)
     {
         Star* star = (Star*)[self viewWithTag:TagOffset+i];
         star.color = _starNormalColor;
@@ -433,7 +458,7 @@
     [self updateRateView];
 
     // Update Stars appearance for fillColor
-    for(int i=1; i<=5; i++)
+    for(int i = 1 ; i <= _starCount; i++)
     {
         Star* star = (Star*)[self viewWithTag:TagOffset+i];
         star.fillColor = _starFillColor;
@@ -446,7 +471,7 @@
     [self updateRateView];
 
     // Update Stars appearance for borderColor
-    for(int i=1; i<=5; i++)
+    for(int i = 1 ; i <= _starCount ; i++)
     {
         Star* star = (Star*)[self viewWithTag:TagOffset+i];
         star.borderColor = _starBorderColor;
@@ -459,7 +484,7 @@
     [self updateRateView];
 
     // Update Stars appearance for fillMode
-    for(int i=1; i<=5; i++)
+    for(int i=1; i<=_starCount; i++)
     {
         Star* star = (Star*)[self viewWithTag:TagOffset+i];
         star.fillMode = _starFillMode;
@@ -472,7 +497,7 @@
     [self updateRateView];
 
     // Update Stars appearance for size
-    for(int i=1; i<=5; i++)
+    for(int i=1; i<=_starCount; i++)
     {
         Star* star = (Star*)[self viewWithTag:TagOffset+i];
         star.size = _starSize;
@@ -483,9 +508,9 @@
 -(void)setFrame:(CGRect)frame
 {
     // Check if frame asked to set is more
-    if(frame.size.width != 5*_starSize || frame.size.height != _starSize)
+    if(frame.size.width != _starCount*_starSize || frame.size.height != _starSize)
     {
-        frame.size.width = 5*_starSize;
+        frame.size.width = _starCount*_starSize;
         frame.size.height = _starSize;
     }
 
@@ -529,7 +554,7 @@
         else if(x > self.frame.size.width)
             x = self.frame.size.width;
         else if (self.step) {
-            float div = (self.frame.size.width * self.step) / 5;
+            float div = (self.frame.size.width * self.step) / _starCount;
             x = (x / div) + self.step;
             x = div * (int)x;
         }
@@ -542,7 +567,7 @@
 #pragma mark
 
 - (CGSize)intrinsicContentSize {
-    return CGSizeMake(self.starSize * 5, self.starSize);
+    return CGSizeMake(self.starSize * _starCount, self.starSize);
 }
 
 @end

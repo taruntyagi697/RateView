@@ -26,6 +26,7 @@
                @"Fill Mode - Horizontal",
                @"Fill Mode - Vertical",
                @"Fill Mode - Axial",
+               @"Change Star Count",
                @"CanRate - Try touch / tap / touch drag",
                @"-------END OF STORY-----"];
     
@@ -171,6 +172,11 @@
     {
         rateVw.rating = 3.65f;
         rateVw.starFillMode = StarFillModeAxial;
+    }
+    else if(indexPath.row == 8)
+    {
+        [rateVw setStarCount:4];
+        rateVw.rating = 3.5f;
     }
     else
     {
