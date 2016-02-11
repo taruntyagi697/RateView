@@ -20,13 +20,13 @@
  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-*/
+ */
 
 #import <UIKit/UIKit.h>
 
 #if !__has_feature(objc_arc)
 #error RateView requires ARC. Please turn on ARC for your project or \
-       add -fobjc-arc flag for RateView.m file in Build Phases -> Compile Sources.
+add -fobjc-arc flag for RateView.m file in Build Phases -> Compile Sources.
 #endif
 
 typedef enum
@@ -69,6 +69,7 @@ typedef enum
 // Star Fill modes Horizontal, Vertical or Axial, starSize in points
 @property(nonatomic,assign)StarFillMode starFillMode;
 @property(nonatomic,assign)CGFloat starSize;
+@property(nonatomic,assign)CGFloat padding;
 
 // RateViewDelegate, register in order to listen to rating changes
 @property(nonatomic,weak)id<RateViewDelegate> delegate;

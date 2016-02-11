@@ -48,6 +48,8 @@ RateView comes with a property set for it's customization as needed :-
     
 * `starSize` : starSize (width == height == size) in points
 
+* `padding` : horizontal space width between every two neighbour stars
+
 * `delegate` : register in order to listen to rating changes
     
 ## [UIColor colorWithPatternImage:] advantage
@@ -63,3 +65,5 @@ RateView comes with a property set for it's customization as needed :-
 ## Demo App
     Demo app includes almost all of the property usages through a pretty basic UITableView example.
     You can go through it to see these in action at first.
+
+
