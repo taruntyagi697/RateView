@@ -26,7 +26,7 @@
                @"Fill Mode - Horizontal",
                @"Fill Mode - Vertical",
                @"Fill Mode - Axial",
-               @"Change Star Count",
+               @"Change Star Count & add padding",
                @"CanRate - Try touch / tap / touch drag",
                @"-------END OF STORY-----"];
     
@@ -39,32 +39,32 @@
     [displayTblVw reloadData];
     
     /* Uncomment this to check out individual property here
-    RateView* rv = [RateView rateViewWithRating:3.5f];
-    [self.view addSubview:rv];
-    
-    // Extra frames width, height ignored
-    rv.frame = CGRectMake(15, 200, 500, 600);
-    
-    // Responsive to star size
-    rv.starSize = 50;
-    
-    // Customizable border color
-    rv.starBorderColor = [UIColor greenColor];
-    
-    // Customizable star normal color
-    rv.starNormalColor = [UIColor redColor];
-    
-    // Customizable star fill color
-    rv.starFillColor = [UIColor yellowColor];
-    
-    // Customizable star fill mode
-    rv.starFillMode = StarFillModeHorizontal;
-    
-    // Change rating whenever needed
-    rv.rating = 2.5f;
-    
-    // Can Rate (User Interaction, as needed)
-    rv.canRate = YES;*/
+     RateView* rv = [RateView rateViewWithRating:3.5f];
+     [self.view addSubview:rv];
+     
+     // Extra frames width, height ignored
+     rv.frame = CGRectMake(15, 200, 500, 600);
+     
+     // Responsive to star size
+     rv.starSize = 50;
+     
+     // Customizable border color
+     rv.starBorderColor = [UIColor greenColor];
+     
+     // Customizable star normal color
+     rv.starNormalColor = [UIColor redColor];
+     
+     // Customizable star fill color
+     rv.starFillColor = [UIColor yellowColor];
+     
+     // Customizable star fill mode
+     rv.starFillMode = StarFillModeHorizontal;
+     
+     // Change rating whenever needed
+     rv.rating = 2.5f;
+     
+     // Can Rate (User Interaction, as needed)
+     rv.canRate = YES;*/
 }
 
 #pragma mark
@@ -176,6 +176,7 @@
     else if(indexPath.row == 8)
     {
         [rateVw setStarCount:4];
+        [rateVw setPadding:10.0f];
         rateVw.rating = 3.5f;
     }
     else
